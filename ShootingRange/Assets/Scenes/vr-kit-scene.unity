@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 579940393}
   - component: {fileID: 579940392}
   - component: {fileID: 579940391}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 724800831}
   - component: {fileID: 724800830}
   - component: {fileID: 724800829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,3 +781,77 @@ PrefabInstance:
       objectReference: {fileID: 3141392233358071707, guid: 2b92445560f783141aefb239d1b291b0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
+--- !u!1 &6750788238355306190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6750788238182285167, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
+  m_PrefabInstance: {fileID: 6750788238355306189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6750788238355306191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6750788239202201359, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
+  m_PrefabInstance: {fileID: 6750788238355306189}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6750788238355306192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750788238355306190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4f2c0214c9b494fa7eb5b8b2c02885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.2
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 1
+  m_TurnUsage: 0
+  m_Controllers:
+  - {fileID: 6750788238355306191}
+  m_DeadZone: 0.75
+--- !u!143 &6750788238355306193
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750788238355306190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.15
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &6750788238355306194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750788238355306190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69ed1a1ddb54f84a82a566739c49098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  inputSource: 4
+  gravity: -9.81
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  additionalHeight: 0.2
