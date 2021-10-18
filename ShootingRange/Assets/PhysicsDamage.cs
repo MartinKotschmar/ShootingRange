@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PhysicsDamage : MonoBehaviour, ITakeDamage
+public class PhysicsDamage : MonoBehaviour//, ITakeDamage
 {
     private Rigidbody rigidBody;
 

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -24,7 +22,7 @@ public class PhysicsProjectile : Projectile
         base.Launch();
         rigidBody.AddRelativeForce(Vector3.forward * weapon.GetShootingForce(), ForceMode.Impulse);
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
@@ -35,4 +33,5 @@ public class PhysicsProjectile : Projectile
             taker.TakeDamage(weapon, this, transform.position);
         }
     }
+    */
 }
