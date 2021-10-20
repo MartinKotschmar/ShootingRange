@@ -1,0 +1,16 @@
+Add layer Grab -> all Objects that are grabable should be in that layer
+Add layer Body -> VR-Rig should be in that layer (not children)
+
+Project Settings -> physics -> uncheck body/grab
+
+weapon: 
+	needs components:
+		- rigidbody
+		- xr grab interactable
+		- box collider (needs to be scaled to appropriate size)
+
+	needs pivot children (copy from example gun) 
+		- so that gun faces in correct direction
+		- drag pivot to "Attach transform" on weapon
+
+		gun fire script: (https://www.youtube.com/watch?v=FMu7hKUX3Oo&t=35s&ab_channel=Valem ~ minute 10)
