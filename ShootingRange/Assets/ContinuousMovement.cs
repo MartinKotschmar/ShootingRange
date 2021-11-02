@@ -17,7 +17,7 @@ public class ContinuousMovement : MonoBehaviour
     public float additionalHeight = 0.2f;
 
     private float fallingSpeed;
-    private XRRig rig;
+    [SerializeField] XRRig rig;
     private Vector2 inputAxis;
     private CharacterController character;
 
