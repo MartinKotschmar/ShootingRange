@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SetVR : MonoBehaviour
 {
     public GameObject VRRig;
     public GameObject WebGLRig;
-    private bool isOnVRDevice = false;
+    private bool isOnVRDevice = true;
 
-    private void Awake() {
-        if(Application.platform == RuntimePlatform.Android)
+    private void Awake()
+    {
+        if (Application.platform == RuntimePlatform.Android)
         {
             isOnVRDevice = true;
         }
 
-        if(Application.platform == RuntimePlatform.WebGLPlayer)
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
             isOnVRDevice = false;
         }
