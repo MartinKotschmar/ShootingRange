@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -706,7 +706,7 @@ Transform:
   - {fileID: 724800828}
   - {fileID: 2012610275}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2012610274
 GameObject:
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 2012610278}
   - component: {fileID: 2012610277}
   - component: {fileID: 2012610276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +936,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6750788238182285161, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6750788238182285161, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
       propertyPath: m_LocalPosition.x
@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6750788238182285161, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.212
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6750788238182285161, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
       propertyPath: m_LocalPosition.z
@@ -982,25 +982,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Rig
       objectReference: {fileID: 0}
-    - target: {fileID: 6750788238610008345, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7163681
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750788238610008345, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750788238610008345, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.6977226
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750788238610008345, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750788238610008345, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -88.489
+    - target: {fileID: 6750788238182285167, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6750788239019924489, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
       propertyPath: m_ModelPrefab
@@ -1142,3 +1126,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   additionalHeight: 0.2
+  rig: {fileID: 6750788238355306195}
+--- !u!114 &6750788238355306195 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6750788238182285166, guid: 21edf6551a48ae5448603b0d234d4846, type: 3}
+  m_PrefabInstance: {fileID: 6750788238355306189}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750788238355306190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7448815bd5148434682b3d931066cd10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
