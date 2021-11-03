@@ -7,7 +7,7 @@ public class MouseLook : MonoBehaviour
 {
     public InputActionReference horizontalLook;
     public InputActionReference verticalLook;
-    public float lookSpeed = 1f;
+    public float lookSpeed = 0.02f;
     public Transform cameraTransfrom;
     float pitch;
     float yaw;
@@ -27,8 +27,8 @@ public class MouseLook : MonoBehaviour
 
     void HandleVerticalLookChange(InputAction.CallbackContext obj)
     {
-        pitch += obj.ReadValue<float>();
-        transform.localRotation = Quaternion.AngleAxis(pitch * lookSpeed, Vector3.up);
+        pitch -= obj.ReadValue<float>();
+        cameraTransfrom.localRotation = Quaternion.AngleAxis(pitch * lookSpeed, Vector3.right);
         
     }
 
