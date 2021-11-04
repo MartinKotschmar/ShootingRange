@@ -13,7 +13,7 @@ public class SetVR : MonoBehaviour
             isOnVRDevice = true;
         }
 
-        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        if (Application.platform == RuntimePlatform.WindowsEditor)
         {
             isOnVRDevice = false;
         }
