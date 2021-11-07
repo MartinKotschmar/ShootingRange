@@ -6,7 +6,11 @@ public class SpawnPoint : MonoBehaviour
     public GameObject player;
 
     private Vector3 respawnLocation;
-
+    public void Teleport()
+    {
+        Awake();
+        Start();
+    }
     void Awake()
     {
         spawnLocations = GameObject.FindGameObjectsWithTag("SpawnPoint");
@@ -26,14 +30,5 @@ public class SpawnPoint : MonoBehaviour
 
         //testing
         //GameObject.Instantiate(player, new Vector3(26, 2.5f, 24), Quaternion.identity);
-    }
-
-    public void TeleportPlayer()
-    {
-        Debug.Log("teleBtn click");
-        Vector3 teleportTargetLocation = new Vector3(16, 2.5f, -5);
-        player.transform.position = teleportTargetLocation;
-
-        GameObject.Instantiate(player, teleportTargetLocation, Quaternion.identity);
     }
 }

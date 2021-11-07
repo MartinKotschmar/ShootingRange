@@ -15,7 +15,7 @@ public class SetVR : MonoBehaviour
 
         if (Application.platform == RuntimePlatform.WindowsEditor)
         {
-            isOnVRDevice = false;
+            isOnVRDevice = true;
         }
 
         VRRig.SetActive(isOnVRDevice);
