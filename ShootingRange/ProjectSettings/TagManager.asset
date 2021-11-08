@@ -7,6 +7,8 @@ TagManager:
   - SpawnPoint
   - TeleportButton
   - Target
+  - Score
+  - Bullet
   layers:
   - Default
   - TransparentFX
