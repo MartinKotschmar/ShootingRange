@@ -4,7 +4,7 @@ public class SetVR : MonoBehaviour
 {
     public GameObject VRRig;
     public GameObject WebGLRig;
-    private bool isOnVRDevice = false;
+    private bool isOnVRDevice = true;
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class SetVR : MonoBehaviour
 
         if (Application.platform == RuntimePlatform.WindowsEditor)
         {
-            isOnVRDevice = false;
+            //isOnVRDevice = false;
         }
 
         VRRig.SetActive(isOnVRDevice);
