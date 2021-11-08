@@ -7,7 +7,6 @@ public class TeleportToRange : MonoBehaviour
 
     public void TeleportPlayer()
     {
-        Debug.Log("Teleport Button clicked");
         Vector3 teleportTargetLocation = new Vector3(16, 2.5f, -5);
         player.transform.position = teleportTargetLocation;
 
