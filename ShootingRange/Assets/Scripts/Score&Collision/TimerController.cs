@@ -76,6 +76,7 @@ public class TimerController : MonoBehaviour
 
         //update highscoreList
         Highscore highscore = new Highscore();
+        highscore.RemoveOldListItems();
         highscore.AddToHighscoresList(KeepScore.Score);
         highscore.SortHighscoresList();
         highscore.RenderHighscoreList();
