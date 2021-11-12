@@ -7,9 +7,10 @@ public class TPBack : MonoBehaviour
 
     public void TeleportPlayerBack()
     {
-        player.transform.position = new Vector3(25.37f, 2.5f, 22.609f);
-        player.transform.Rotate(0f, 180f, 0f);
+        Vector3 teleportTargetLocation = new Vector3(26f, 2.5f, 23.65f);
+        Vector3 teleportTargetRotation = new Vector3(0, -180, 0);
+        player.transform.position = teleportTargetLocation;
+        player.transform.Rotate(teleportTargetRotation, Space.World);
 
-        //GameObject.Instantiate(player, teleportTargetLocation, Quaternion.identity);
     }
 }
