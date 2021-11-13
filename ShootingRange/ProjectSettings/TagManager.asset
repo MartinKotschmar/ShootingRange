@@ -9,6 +9,8 @@ TagManager:
   - Target
   - Score
   - Bullet
+  - HighscoreList
+  - HighscoreListItem_template
   layers:
   - Default
   - TransparentFX

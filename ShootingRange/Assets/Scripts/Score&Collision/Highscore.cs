@@ -1,15 +1,15 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-
 public class Highscore : MonoBehaviour
 {
-    public List<int> highscoresList;
+    public List<int> highscoresList = new List<int>();
     public GameObject highscoresListItemTemplate;
     private GameObject parentOfHighscoresList;
 
-    private void Awake()
+    public void FindHighscoreList()
     {
-        parentOfHighscoresList = GameObject.Find("Content - HighscoreList");
+        parentOfHighscoresList = GameObject.FindGameObjectWithTag("HighscoreList");
     }
 
     public void AddToHighscoresList(int newScore)
@@ -19,10 +19,16 @@ public class Highscore : MonoBehaviour
 
     public void RemoveOldListItems()
     {
-        foreach (Transform child in parentOfHighscoresList.transform)
+        Debug.Log(parentOfHighscoresList);
+
+        if (parentOfHighscoresList.transform.childCount > 0)
         {
-            Destroy(child.gameObject);
+            foreach (Transform child in parentOfHighscoresList.transform)
+            {
+                Destroy(child.gameObject);
+            }
         }
+
     }
 
     public void RenderHighscoreList()
@@ -32,7 +38,29 @@ public class Highscore : MonoBehaviour
         for (int i = 0; i < highscoresList.Count; i++)
         {
             g = Instantiate(highscoreListItemTemplate, parentOfHighscoresList.transform);
-            g.transform.GetComponent<TMPro.TextMeshProUGUI>().text = highscoresList[i].ToString();
+
+            Debug.Log(highscoresList[i]);
+
+            if (g.transform.GetChild(0).tag == "HighscoreListItem_template")
+            {
+                TextMeshProUGUI mesh = g.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
+                mesh.text = highscoresList[i].ToString();
+
+                Debug.Log(g);
+                Debug.Log(g.transform.childCount);
+                Debug.Log(mesh);
+            }
+
+
+
+
+
+
+
+            // g.transform.GetComponent<TMPro.TextMeshProUGUI>().text = highscoresList[i].ToString();
+            //Debug.Log(g.transform.GetComponent<TMPro.TextMeshProUGUI>().text);
+
         }
     }
 

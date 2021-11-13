@@ -6,7 +6,7 @@ public class TimerController : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI lastScoreTextValue;
     public GameObject player;
-    public GameObject highscoreList;
+    public GameObject highscoresListItemTemplate;
 
     public static TimerController instance;
 
@@ -75,7 +75,11 @@ public class TimerController : MonoBehaviour
         TPBackInstance.TeleportPlayerBack();
 
         //update highscoreList
+
         Highscore highscore = new Highscore();
+        highscore.highscoresListItemTemplate = highscoresListItemTemplate;
+        Debug.Log(KeepScore.Score);
+        highscore.FindHighscoreList();
         highscore.RemoveOldListItems();
         highscore.AddToHighscoresList(KeepScore.Score);
         highscore.SortHighscoresList();
