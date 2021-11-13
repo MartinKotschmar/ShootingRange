@@ -12,11 +12,6 @@ public class Highscore : MonoBehaviour
         parentOfHighscoresList = GameObject.FindGameObjectWithTag("HighscoreList");
     }
 
-    public void AddToHighscoresList(int newScore)
-    {
-        highscoresList.Add(newScore);
-    }
-
     public void RemoveOldListItems()
     {
         Debug.Log(parentOfHighscoresList);
@@ -52,20 +47,8 @@ public class Highscore : MonoBehaviour
                 Debug.Log(mesh);
             }
 
-
-
-
-
-
-
-            // g.transform.GetComponent<TMPro.TextMeshProUGUI>().text = highscoresList[i].ToString();
-            //Debug.Log(g.transform.GetComponent<TMPro.TextMeshProUGUI>().text);
-
         }
     }
 
-    public void SortHighscoresList()
-    {
-        highscoresList.Sort((a, b) => b.CompareTo(a));
-    }
+
 }

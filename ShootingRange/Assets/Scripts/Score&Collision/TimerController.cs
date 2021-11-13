@@ -64,6 +64,11 @@ public class TimerController : MonoBehaviour
 
     private void Cleanup()
     {
+        //get gameobject -> get classes in scripts of that object -> call function of the classes
+        SaveHighscoreData HighscoreData = GameObject.FindGameObjectWithTag("HighscoreList").GetComponent<SaveHighscoreData>();
+        HighscoreData.saveData(KeepScore.Score);
+
+
         //update last score in mainMenu
         KeepScore lastScore = new KeepScore();
         lastScore.text = lastScoreTextValue;
@@ -75,14 +80,11 @@ public class TimerController : MonoBehaviour
         TPBackInstance.TeleportPlayerBack();
 
         //update highscoreList
-
         Highscore highscore = new Highscore();
         highscore.highscoresListItemTemplate = highscoresListItemTemplate;
-        Debug.Log(KeepScore.Score);
+        highscore.highscoresList = HighscoreData.savedHighscoresList;
         highscore.FindHighscoreList();
         highscore.RemoveOldListItems();
-        highscore.AddToHighscoresList(KeepScore.Score);
-        highscore.SortHighscoresList();
         highscore.RenderHighscoreList();
     }
 }

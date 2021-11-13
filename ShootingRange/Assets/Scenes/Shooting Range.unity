@@ -5147,6 +5147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454566398}
   - component: {fileID: 454566399}
+  - component: {fileID: 454566400}
   m_Layer: 5
   m_Name: Content - HighscoreList
   m_TagString: HighscoreList
@@ -5199,6 +5200,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &454566400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454566397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430b68617d58b274d876bf5380a495eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedHighscoresList: 
 --- !u!1 &471156847
 GameObject:
   m_ObjectHideFlags: 0
@@ -5546,9 +5560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc3340e7e76a4a4ca2758da7dcd6cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highscore: {fileID: 0}
   text: {fileID: 0}
-  highscoresList: 
 --- !u!4 &507788340
 Transform:
   m_ObjectHideFlags: 0
@@ -65379,7 +65391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e64108b68c20445ae7bc1c33554713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeepScore: {fileID: 1347432917}
   lastScoreTextValue: {fileID: 29935403}
   player: {fileID: 1465256210}
   highscoresListItemTemplate: {fileID: 3675056601581822281, guid: feeeb5bde2f508f4083905e82118ab68, type: 3}
@@ -65412,9 +65423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc3340e7e76a4a4ca2758da7dcd6cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highscore: {fileID: 1347432918}
   text: {fileID: 29935403}
-  highscoresList: 
 --- !u!114 &1347432918
 MonoBehaviour:
   m_ObjectHideFlags: 0
