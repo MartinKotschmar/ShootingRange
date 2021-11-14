@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class StartGame : MonoBehaviour
@@ -12,11 +13,10 @@ public class StartGame : MonoBehaviour
     public void DoStartGame()
     {
         CountdownCanvas.gameObject.SetActive(true);
-        System.Threading.Thread.Sleep(500);
+        Task.Delay(500);
 
         StartCoroutine(Countdown());
     }
-
 
     IEnumerator Countdown()
     {

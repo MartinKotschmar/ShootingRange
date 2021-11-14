@@ -7,16 +7,13 @@ public class TimerController : MonoBehaviour
     public TMPro.TextMeshProUGUI lastScoreTextValue;
     public GameObject player;
     public GameObject highscoresListItemTemplate;
-
     public static TimerController instance;
-
     public TMPro.TextMeshProUGUI timeCounter;
     public float timeSpanInSeconds = 30;
 
     private TimeSpan timePlaying;
     private TimeSpan timeLeftPlaying;
     private bool timerGoing;
-
     private float elapsedTime;
 
     private void Awake()
@@ -54,7 +51,6 @@ public class TimerController : MonoBehaviour
                 yield return null;
             }
             elapsedTime += Time.deltaTime;
-            //timePlaying = TimeSpan.FromSeconds(elapsedTime);
             timeLeftPlaying = TimeSpan.FromSeconds(timeSpanInSeconds - elapsedTime);
             string timeLeftPlayingStr = timeLeftPlaying.ToString("mm':'ss'.'ff");
             timeCounter.text = timeLeftPlayingStr;

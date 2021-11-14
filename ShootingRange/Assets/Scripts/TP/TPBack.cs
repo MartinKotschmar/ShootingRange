@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class TPBack : MonoBehaviour
 {
-    private Vector3 teleportTargetLocation;
     public GameObject player;
+
+    private Vector3 teleportTargetLocation;
 
     public void TeleportPlayerBack()
     {
@@ -11,6 +12,5 @@ public class TPBack : MonoBehaviour
         Vector3 teleportTargetRotation = new Vector3(0, -180, 0);
         player.transform.position = teleportTargetLocation;
         player.transform.Rotate(teleportTargetRotation, Space.World);
-
     }
 }

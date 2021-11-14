@@ -6,6 +6,7 @@ public class SpawnPoint : MonoBehaviour
     public GameObject player;
 
     private Vector3 respawnLocation;
+
     public void Teleport()
     {
         Awake();
@@ -18,7 +19,6 @@ public class SpawnPoint : MonoBehaviour
     }
     void Start()
     {
-        //player = (GameObject)Resources.Load("Player", typeof(GameObject));
         respawnLocation = player.transform.position;
         SpawnPlayer();
     }
@@ -27,8 +27,5 @@ public class SpawnPoint : MonoBehaviour
     {
         int spawn = Random.Range(0, spawnLocations.Length);
         GameObject.Instantiate(player, spawnLocations[spawn].transform.position, Quaternion.identity);
-
-        //testing
-        //GameObject.Instantiate(player, new Vector3(26, 2.5f, 24), Quaternion.identity);
     }
 }

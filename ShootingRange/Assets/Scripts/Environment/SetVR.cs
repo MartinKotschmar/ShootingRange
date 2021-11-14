@@ -4,6 +4,7 @@ public class SetVR : MonoBehaviour
 {
     public GameObject VRRig;
     public GameObject WebGLRig;
+
     private bool isOnVRDevice = true;
 
     private void Awake()

@@ -1,34 +1,33 @@
- using UnityEngine;
-using System.Threading;
+using System.Threading.Tasks;
+using UnityEngine;
 
 public class TargetPoints : MonoBehaviour
 {
-
     public GameObject[] targets;
-
     public GameObject target;
 
     private Vector3 oldPosition;
 
-    void Awake () 
+    void Awake()
     {
         targets = GameObject.FindGameObjectsWithTag("Target");
     }
-    private void OnCollisionEnter(Collision collision)
+    private async void OnCollisionEnter(Collision collision)
     {
-
-        int spawn = Random.Range(0, targets.Length);
-
-        Debug.Log("was shot");
         if (collision.gameObject.tag == "Bullet")
         {
             KeepScore.Score += 100;
-            Debug.Log("Hit the ball");
-            this.gameObject.transform.position = oldPosition;
-            Destroy(this.gameObject);
-            Thread.Sleep(5);
-            GameObject.Instantiate(target, oldPosition, Quaternion.identity);
+            //wait for target to fold down
+            await Task.Delay(300);
+            //hide target
+            this.gameObject.SetActive(false);
+
+            //"respawn" after 2 seconds
+            await Task.Delay(1200);
+            //reset location after collision (reverse fold down)
+            transform.rotation = Quaternion.Euler(-90, 0, 0);
+            this.gameObject.SetActive(true);
         }
-    
+
     }
 }
